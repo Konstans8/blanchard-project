@@ -1,0 +1,20 @@
+.about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .about__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    color: #333333;
+    margin: 0;
+  }
+  
+  .about__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    max-width: 1080px;
+  }

@@ -1,0 +1,117 @@
+.contacts {
+    border: 1px solid #CACACA;
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.contacts__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    margin: 0;
+}
+
+.contacts__form-container {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__form:not(:last-child) {
+    margin-right: 20px;
+}
+
+.contacts__name,
+.contacts__tel {
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 270px;
+    height: 50px;
+    padding: 0 20px 0 20px;
+}
+
+.contacts__btn {
+    border: 2px solid #9D5CD0;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 330px;
+    height: 50px;
+    background-color: transparent;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #9D5CD0;
+    cursor: pointer;
+}
+
+.contacts__label {
+    margin-right: 20px;
+}
+
+.contacts__btn:hover {
+    outline: 1px solid #9D5CD0;
+    box-shadow: 
+        0 0 0 3px #ffffff,
+        0 0 0 5px #9D5CD0;
+}
+
+.contacts__btn:focus {
+    background-color: #9D5CD0;
+    color: white;
+    box-shadow: none;
+}
+
+.contacts__btn:active {
+    outline: 1px solid white;
+    background-color: #7943A4;
+    color: white;
+    box-shadow: none;
+}
+
+.contacts__btn-320 {
+    display: none;
+}
+
+.contacts__form {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__img {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.contacts__img:hover .contacts__opacity-svg {
+    opacity: 50%;
+}
+
+.contacts__img:active {
+    outline: 1px solid #9D5CD0;
+    border-radius: 50%;
+}
+
+.contacts__label-container {
+    display: flex;
+}
+

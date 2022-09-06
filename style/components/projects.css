@@ -1,0 +1,159 @@
+.projects {
+    padding-bottom: 80px;
+}
+
+.projects__container {
+    position: relative;
+}
+
+.projects__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    color: #333333;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.projects__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    margin-bottom: 30px;
+    max-width: 1080px;
+}
+
+.projects__descr-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #9D5CD0;
+  }
+
+.projects__sub-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+    margin-bottom: 23px;
+}
+
+
+.projects__marker {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.projects__marker:hover {
+      content: url(../../images/events/tultip-hover.svg);
+}
+.projects__marker:focus {
+      content: url(../../images/events/tultip-focus.svg);
+}
+.projects__marker:active {
+      content: url(../../images/events/tultip-active.svg);
+}
+
+
+.projects__swiper {
+    max-width: 1450px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.projects__image {
+    filter: grayscale(1);
+    opacity: .4;
+    transition-property: filter, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.projects__image:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.projects__navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.projects__swiper-button-prev {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    z-index: 100;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+}
+
+.projects__swiper-button-next {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    z-index: 100;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+}
+
+.projects__swiper-button-prev::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: translate(11px, calc(-70% + 11px)) rotate(135deg);
+    color: var(--black-light);
+}
+
+.projects__swiper-button-next::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: translate(9px, calc(-70% + 11px)) rotate(-45deg);
+    color: var(--black-light);
+}
+
+.projects__swiper-button-prev:hover {
+    outline: 1px solid var(--button);
+}
+.projects__swiper-button-next:hover {
+    outline: 1px solid var(--button);
+}
+.projects__swiper-button-prev:focus {
+    background-color: var(--blue-light);
+}
+.projects__swiper-button-next:focus {
+    background-color: var(--blue-light);
+}
+.projects__swiper-button-prev:active {
+    background-color: var(--blue-light);
+    outline: 1px solid var(--button);
+}
+.projects__swiper-button-next:active {
+    background-color: var(--blue-light);
+    outline: 1px solid var(--button);
+}
+
+
+  

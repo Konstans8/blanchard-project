@@ -1,0 +1,52 @@
+.swiper {
+    max-width: 100%;
+    height: 800px;
+}
+
+.hero__content {
+    margin-top: 200px;
+}
+
+.hero__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 98px;
+    color: var(--white);
+    width: 700px;
+}
+
+.hero__descr {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--white);
+    width: 600px;
+    margin-bottom: 100px;
+}
+
+.hero__btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--white);
+    padding: 20px 40px;
+    background-color: var(--active);
+    border-radius: 30px;
+}
+
+.hero__btn:hover {
+    outline: 3px solid #D1A9F0;;
+}
+
+.hero__btn:focus {
+    outline: 2px solid #D1A9F0;
+    background-color: #7943A4;
+} 
+
+.hero__btn:active {
+    box-shadow: inset 0 0 0 3px #D1A9F0;
+    background-color: #7943A4;
+} 

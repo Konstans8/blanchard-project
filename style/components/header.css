@@ -1,0 +1,203 @@
+.header {
+    background-color: black;
+}
+
+.header__container-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header__nav-top-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__nav-top-item:not(:last-child) {
+    margin-right: 62px;
+}
+
+.header__nav-top-link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--white);
+}
+
+.header__nav-top-link:hover {
+    background-color: var(--hover);
+}
+.header__nav-top-link:focus {
+    color: var(--focus);
+    background-color: transparent;
+}
+.header__nav-top-link:active {
+    color: var(--active);
+}
+
+.header__btn-login {
+    color: var(--white);
+}
+
+.header__btn-login:hover {
+    background-color: var(--hover);
+}
+
+.header__bottom {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.header__container-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    padding-top: 23px;
+}
+
+.header__dropdown {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__dropdown-container {
+    margin-right: 111px;
+}
+
+.header__dropdown-btn {
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.header__dropdown-btn::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: translate(5px, calc(-50% + 2px)) rotate(45deg);
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.header__dropdown-btn:hover {
+    background-color: var(--hover);
+}
+
+.header__dropdown-btn:focus {
+    background-color: transparent;
+    color: var(--focus);
+}
+
+.header__dropdown-btn:hover {
+    color: var(--active);
+}
+
+.header__dropdown-btn.active::after {
+    transform: rotate(225deg);
+}
+
+.header__dropdown-menu {
+    display: none;
+}
+
+.header__dropdown-menu-active {
+    display: block;
+    position: absolute;
+    top: 78px;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-scroll {
+    width: 300px;
+    height: 250px;
+}
+
+.header__dropdown-item {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.header__dropdown-link {
+    padding: 10px 110px 10px 10px;
+    width: 100px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--white);
+}
+
+.header__bottom-form {
+    position: relative;
+}
+
+.header__bottom-form-btn {
+    position: absolute;
+    top: 5px;
+    right: 105%;
+    width: 22px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.header__bottom-input {
+    max-width: 200px;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    outline: none;
+    transition: border 0.1s linear;
+}
+
+.header__bottom-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--white);
+}
+
+.header__bottom-input:focus-within {
+    border-bottom-color: var(--focus);
+}
+
+.header__bottom-input:focus-within::placeholder {
+    opacity: 0;
+}
+
+.header__bottom-input:hover:not(:focus) {
+    cursor: pointer;
+    border-bottom-color: var(--hover);
+}
+
+
+
+.header__search-container {
+    display: none;
+}
+

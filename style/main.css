@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.title {
+    display: none;
+}
+
+:root {
+    --black: #000000;
+    --black-light: #333333;
+    --grey-dark: #666666;
+    --grey: #999999;
+    --grey-light: #CACACA;
+    --white-dark: #ECECEC;
+    --white: #fff;
+    --blue-light: #D1A9F0;
+    --hover: #7943A4;
+    --focus: #C283F3;
+    --active: #9D5CD0;
+    --button: #9D5CD0;
+    --circle-btn: #26A5E4;
+    --green: #30BF39;
+    --brown: #D11616;
+  }
+
+  
