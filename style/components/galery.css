@@ -107,9 +107,6 @@
     color: #C283F3;
 }
 
-
-
-
 .galery__right {
     width: 1230px;
     overflow: hidden;
@@ -147,11 +144,84 @@
 
 .galery__image {
     cursor: pointer;
+    z-index: 0;
 }
 
 .galery__image:hover {
     display: block;
     background: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
 }
 
+.galery__slide:hover {
+    background-image: url(../../images/galery/hover-galery.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.galery__card-active {
+    width: 900px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: none;
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
+}
+
+.galery__card-container {
+    display: flex;
+    position: relative;
+}
+
+.galery__card-content {
+    padding: 50px;
+}
+
+.galery__card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333333;
+}
+
+.galery__card-subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.galery__card-date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.galery__card-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.galery__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.overlay {
+    display: block;
+}
+
+.galery__swiper {
+    position: relative;
+}
 

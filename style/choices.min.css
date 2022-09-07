@@ -223,3 +223,16 @@
     background-color: transparent;
     color: var(--white);
 }
+
+
+@media (max-width: 1400px) {
+
+    .choices__inner {
+        max-width: 250px;
+    }
+
+    .choices__list--dropdown, .choices__list[aria-expanded] {
+        width: 258px;
+    }
+
+}

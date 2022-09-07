@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
 
+    <script defer src="./script/burger-menu.js"></script>
+    <script defer src="./script/search.js"></script>
     <script defer src="./script/drop-down.js"></script>
+    <script defer src="./script/galery.js"></script>
     <script defer src="./script/simplebar.js"></script>
     <script defer src="./script/choices.min.js"></script>
     <script defer src="./script/choices.js"></script>
@@ -30,9 +33,54 @@
     <header class="header">
         <div class="header__top">
             <div class="header__container-top container">
-                <div class="header__logo">
-                    <img src="./images/header/logo.svg" alt="" class="header__logo-img">
-                </div>
+                    <div class="header__media-nav">
+                        <div class="header__burger">
+                            <button class="header__burger-menu">
+                              <span></span>
+                              <img src="./images/header/Burger.svg" alt="" class="header__burger-img-open">
+                            </button>
+                            <div class="header__menu-list">
+                                <button class="header__burger-close">
+                                    <img src="./images/header/close.svg" alt="">
+                                </button>
+                                <ul class="header__menu-media-list">
+                                  <li><a class="header__menu-link" href="">О нас</a></li>
+                                  <li><a class="header__menu-link" href="">Галерея</a></li>
+                                  <li><a class="header__menu-link" href="">Каталог</a></li>
+                                  <li><a class="header__menu-link" href="">События</a></li>
+                                  <li><a class="header__menu-link" href="">Проекты</a></li>
+                                  <li><a class="header__menu-link" href="">Контакты</a></li>
+                                </ul>
+                                <button class="header__menu-btn-login">
+                                    <img src="./images/header/login.svg" alt="">
+                                    Войти
+                                </button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="header__logo">
+                        <picture>
+                            <source media="(max-width: 320px)" srcset="./images/header/logo-media.png">
+                            <img src="./images/header/logo.svg" alt="" class="header__logo-img">
+                        </picture>
+                    </div>
+                    <div class="header__media-search">
+                        <div class="header__search-container">
+                            <div class="header__search-media-container">
+                                <img src="./images/header/search.svg" alt="">
+                                <input type="search" class="header__search-input" placeholder="Что будем иcкать?">
+                                <button class="header__search-remove">
+                                    <img src="./images/header/close.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header__search">
+                            <button class="header__btn-search">
+                                <img src="./images/header/search.svg" alt="" class="header__btn-search-img">
+                            </button>
+                        </div>
+                    </div>
+
                 <div class="header__navigation-top">
                     <nav class="header__nav-top">
                         <ul class="header__nav-top-list">
@@ -182,7 +230,7 @@
         <section class="hero">
             <div class="hero__swiper swiper">
                 <div class="hero__wrapper swiper-wrapper">
-                    <div class="hero__slide swiper-slide" style="background-image: url('./images/hero/hero-img-1.jpg');">
+                    <div class="hero__slide swiper-slide hero__slide-img-1">
                         <div class="hero__content container">
                             <h2 class="hero__title">
                               Прикоснитесь к прекрасному
@@ -190,10 +238,10 @@
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
-                            <button aria-label="Заказать расчёт" class="hero__btn btn-reset">Подписаться на рассылку</button>
+                            <button aria-label="Заказать расчёт" class="hero__btn">Подписаться на рассылку</button>
                         </div>
                     </div>
-                    <div class="hero__slide swiper-slide" style="background-image: url('./images/hero/hero-img-2.jpg');">
+                    <div class="hero__slide swiper-slide hero__slide-img-2">
                         <div class="hero__content container">
                             <h2 class="hero__title">
                               Прикоснитесь к прекрасному
@@ -201,10 +249,10 @@
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
-                            <button aria-label="Заказать расчёт" class="hero__btn btn-reset">Подписаться на рассылку</button>
+                            <button aria-label="Заказать расчёт" class="hero__btn">Подписаться на рассылку</button>
                         </div>
                     </div>
-                    <div class="hero__slide swiper-slide" style="background-image: url('./images/hero/hero-img-3.jpg');">
+                    <div class="hero__slide swiper-slide hero__slide-img-3">
                         <div class="hero__content container">
                             <h2 class="hero__title">
                               Прикоснитесь к прекрасному
@@ -212,7 +260,7 @@
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
-                            <button aria-label="Заказать расчёт" class="hero__btn btn-reset">Подписаться на рассылку</button>
+                            <button aria-label="Заказать расчёт" class="hero__btn">Подписаться на рассылку</button>
                         </div>
                     </div>
                 </div>
@@ -268,7 +316,7 @@
                         </div>
 
                         <div class="galery__wrapper swiper-wrapper">
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="one">
                                 <picture>
                                     <source media="(max-width: 530px)" srcset="./images/320/galery320-1.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-1.jpg">
@@ -276,7 +324,7 @@
                                     <img class="galery__image" src="./images/galery/galery-1.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="two">
                                 <picture>
                                     <source media="(max-width: 530px)" srcset="./images/320/galery320-2.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-2.jpg">
@@ -284,7 +332,7 @@
                                     <img class="galery__image" src="./images/galery/galery-2.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="three">
                                 <picture>
                                     <source media="(max-width: 530px)" srcset="./images/320/galery320-3.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-3.jpg">
@@ -292,7 +340,7 @@
                                     <img class="galery__image" src="./images/galery/galery-3.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="four">
                                 <picture>
                                     <source media="(max-width: 530px)" srcset="./images/320/galery320-4.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-4.jpg">
@@ -300,7 +348,7 @@
                                     <img class="galery__image" src="./images/galery/galery-4.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="five">
                                 <picture>
                                     <source media="(max-width: 530px)" srcset="./images/320/galery320-5.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-5.jpg">
@@ -308,13 +356,25 @@
                                     <img class="galery__image" src="./images/galery/galery-5.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="galery__slide swiper-slide">
+                            <div class="galery__slide swiper-slide" id="six">
                                 <picture>
-                                    <source media="(max-width: 530px)" srcset="./images/320/galery320-6.jpg">
+                                    <source media="(max-width: 530px)" srcset="./images/320/galery320-4.jpg">
                                     <source media="(max-width: 768px)" srcset="./images/768/galery768-6.jpg">
                                     <source media="(max-width: 1024px)" srcset="./images/1024/galery1024-6.jpg">
                                     <img class="galery__image" src="./images/galery/galery-6.jpg" alt="">
                                 </picture>
+                            </div>
+                        </div>
+                        <div class="galery__card-active">
+                            <div class="galery__card-container">
+                                <img src="./images/galery/card.png" alt="" class="galery__card-img">
+                            <button class="galery__delete"><img src="./images/galery/x.png" alt=""></button>
+                            <div class="galery__card-content">
+                                <h4 class="galery__card-title">Казимир Малевич</h4>
+                                <h5 class="galery__card-subtitle">«Женщина с граблями»</h5>
+                                <p class="galery__card-date">1931–1932</p>
+                                <p class="galery__card-descr">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -346,9 +406,6 @@
                             </div>
                             <div class="catalog__card" data-target="2">
                                 <picture>
-                                    <source media="(max-width: 320px)" srcset="">
-                                    <source media="(max-width: 768px)" srcset="">
-                                    <source media="(max-width: 1024px)" srcset="">
                                     <img src="./images/catalog/catalog-img-2.jpg" alt="" class="catalog__image">
                                 </picture>
                                 <p class="catalog__name">Что мы о нём знаем?</p>
@@ -398,9 +455,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -417,9 +472,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -436,9 +489,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -455,9 +506,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -474,9 +523,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -493,9 +540,7 @@
                                 <div class="catalog__inside-container">
                                     <div class="catalog__inside">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="img/320/Rectangle320.png">
-                                            <source media="(max-width: 768px)" srcset="img/768/Rectangle 212.png">
-                                            <source media="(max-width: 1024px)" srcset="img/1024/Rectangle 212.png">
+                                            <source media="(max-width: 320px)" srcset="./images/catalog/Rectangle2.png">
                                             <img src="./images/catalog/Rectangle.png" alt="" class="catalog__inside-img">
                                         </picture>
                                         <div class="catalog__inside-right">
@@ -613,6 +658,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="event__pagination"></div>
                 </div>
             </div>
         </section>
@@ -732,13 +778,13 @@
               <div class="contacts__social">
                 <h4 class="contacts__title">Связаться в один клик</h4>
                 <a href="" class="contacts__icon-link">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="contacts__img">
+                  <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="contacts__img">
                   <path class="contacts__opacity-svg" d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z" fill="#30BF39"/>
                   <path d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z" fill="white"/>
                   </svg>
                 </a>
                 <a href="" class="contacts__icon-link">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="contacts__img">
+                  <svg width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="contacts__img">
                   <path class="contacts__opacity-svg" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_136320_63)"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
                   <defs>
@@ -766,8 +812,8 @@
         <footer class="footer">
           <div class="footer__container container">
             <picture>
-              <source media="(max-width: 320px)" srcset="img/320/logo320.svg">
-              <img src="./images/header/logo.svg" alt="">
+                <source media="(max-width: 320px)" srcset="./images/header/logo-media.png">
+                <img src="./images/header/logo.svg" alt="" class="header__logo-img">
             </picture>
             <ul class="footer__social">
               <li class="footer__social-item">

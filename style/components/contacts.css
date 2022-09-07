@@ -32,6 +32,7 @@
 .contacts__form-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contacts__form:not(:last-child) {
@@ -55,7 +56,6 @@
     width: 330px;
     height: 50px;
     background-color: transparent;
-    font-family: sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -95,6 +95,7 @@
 .contacts__form {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contacts__img {
@@ -113,5 +114,6 @@
 
 .contacts__label-container {
     display: flex;
+    flex-wrap: wrap;
 }
 

@@ -88,6 +88,20 @@
     background-color: transparent;
 }
 
+.catalog__accordion-title:hover {
+    background-color: var(--button);
+}
+.catalog__accordion-title:focus {
+    color: var(--button);
+    background-color: transparent;
+}
+
+.catalog__accordion-title:active  {
+    color: var(--hover);
+    background-color: transparent; 
+}
+
+
 .catalog__icon {
     position: relative;
     display: block;
@@ -115,6 +129,10 @@
     color: var(--black-light);
 }
 
+.catalog__icon:hover {
+    background-color: var(--button);
+}
+
 .ui-state-active .catalog__icon::after {
     transform: translate(17px, calc(-70% + 25px)) rotate(225deg);
 }
@@ -135,6 +153,14 @@
     font-size: 16px;
     line-height: 32px;
     color: var(--black-light);
+}
+
+.catalog__accordion-item:hover {
+    background-color: var(--button);
+}
+.catalog__accordion-item:focus {
+    background-color: transparent;
+    text-decoration: underline var(--button);
 }
 
 .catalog__inside {

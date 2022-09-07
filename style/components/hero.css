@@ -7,6 +7,16 @@
     margin-top: 200px;
 }
 
+.hero__slide-img-1 {
+    background-image: url(../../images/hero/hero-img-1.jpg);
+}
+.hero__slide-img-2 {
+    background-image: url(../../images/hero/hero-img-2.jpg);
+}
+.hero__slide-img-3 {
+    background-image: url(../../images/hero/hero-img-3.jpg);
+}
+
 .hero__title {
     font-style: normal;
     font-weight: 700;

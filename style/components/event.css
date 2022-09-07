@@ -70,3 +70,19 @@
     position: absolute;
     bottom: 40px;
 }
+
+.event__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--grey-dark);
+}

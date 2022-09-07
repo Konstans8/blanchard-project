@@ -1,0 +1,90 @@
+@media (max-width: 768px) {
+
+
+    .header__search-input {
+        width: 100%;
+    }
+
+    .open {
+        width: 93%;
+    }
+
+
+    .hero__slide-img-1 {
+        background-image: url(../../images/768/swiper768-1.png);
+        background-repeat: no-repeat;
+    }
+    .hero__slide-img-2 {
+        background-image: url(../../images/768/swiper768-2.png);
+        background-repeat: no-repeat;
+    }
+    .hero__slide-img-3 {
+        background-image: url(../../images/768/swiper768-3.png);
+        background-repeat: no-repeat;
+    }
+
+    .hero__title {
+        font-size: 44px;
+        line-height: 56px;
+        max-width: 360px;
+    }
+
+    .hero__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 360px;
+        margin-bottom: 35px;
+    }
+
+    .hero__btn {
+        padding: 20px 15px;
+    }
+
+
+    .galery {
+        height: 800px;
+    }
+
+    .galery__container {
+        flex-direction: column;
+    }
+
+    .galery__checkbox-container {
+        margin-top: 80px;
+    }
+
+    .galery__right {
+        width: 100%;
+    }
+
+    .catalog__content {
+        flex-direction: column-reverse;
+    }
+
+    .catalog__left {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .catalog__right {
+        width: 100%;
+    }
+
+    .catalog__accordion-list {
+        column-count: 3;
+    }
+
+    .projects__swiper {
+        max-width: 580px;
+    }
+
+
+}
+
+
+@media (max-width: 498px) {
+    .projects__swiper {
+        max-width: 265px;
+    }
+}

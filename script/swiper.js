@@ -40,13 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
       320: {
         slidesPerView: 1,
       },
-      500: {
+      700: {
         slidesPerView: 2,
       },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
+      1500: {
         slidesPerView: 3,
       }
     }
@@ -57,6 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const eventSlider = new Swiper('.event__swiper', {
     direction: 'horizontal',
     loop: true,
+
+    pagination: {
+      el: '.event__pagination',
+      clickable: true,
+      
+    },
 
     spaceBetween: 50,
 
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       768: {
         slidesPerView: 2,
       },
-      1024: {
+      898: {
         slidesPerView: 3,
       }
     }
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
       768: {
         slidesPerView: 2,
       },
-      1024: {
+      1400: {
         slidesPerView: 3,
       }
     }
