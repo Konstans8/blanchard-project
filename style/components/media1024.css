@@ -160,7 +160,15 @@
         margin-top: 120px;
     }
 
-    
+    .galery__card-active {
+        width: 594px;
+        height: 407px;
+    }
+
+    .galery__card-content {
+        padding: 15px;
+    }
+
     .catalog__accordion-list {
         column-count: 2;
     }

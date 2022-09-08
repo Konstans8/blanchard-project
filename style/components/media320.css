@@ -110,6 +110,15 @@
         line-height: 38px;
     }
 
+    .galery__card-active {
+        width: 360px;
+        height: 450px;
+    }
+
+    .galery__card-container {
+        flex-direction: column;
+    }
+
     .choices__inner {
         max-width: 220px;
     }

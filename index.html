@@ -12,6 +12,7 @@
 
     <script defer src="./script/burger-menu.js"></script>
     <script defer src="./script/search.js"></script>
+    <script defer src="./script/login.js"></script>
     <script defer src="./script/drop-down.js"></script>
     <script defer src="./script/galery.js"></script>
     <script defer src="./script/simplebar.js"></script>
@@ -21,6 +22,8 @@
     <script defer src="./script/jquery-ui.js"></script>
     <script defer src="./script/accordeon.js"></script>
     <script defer src="./script/tabs.js"></script>
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="./script/validate.js"></script>
     <script defer src="./script/map.js"></script>
     <script defer src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
     <script defer src="./script/swiper-bundle.min.js"></script>
@@ -110,6 +113,21 @@
                     <button class="header__btn-login">
                         <img src="./images/header/login.svg" alt="">
                         Войти
+                    </button>
+                </div>
+                <div class="header__login-open">
+                    <div class="header__login-open-container">
+                        <p class="header__login-open-title">Вход в личный кабинет</p>
+                        <div class="header__login-open-content">
+                            <p class="header__login-hello">Добро пожаловать!</p>
+                            <input class="header__input" type="text" placeholder="E-mail">
+                            <input class="header__input" type="password" placeholder="Password">
+                            <input class="header__input-btn" type="button" value="Войти">
+                            <a href="" class="header__registration">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <button class="header__login-close">
+                        <img src="./images/header/close.svg" alt="">
                     </button>
                 </div>
             </div>
@@ -227,14 +245,14 @@
 
     <main class="main">
 
-        <section class="hero">
+        <div class="hero">
             <div class="hero__swiper swiper">
                 <div class="hero__wrapper swiper-wrapper">
                     <div class="hero__slide swiper-slide hero__slide-img-1">
                         <div class="hero__content container">
-                            <h2 class="hero__title">
+                            <p class="hero__title">
                               Прикоснитесь к прекрасному
-                            </h2>
+                            </p>
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
@@ -243,9 +261,9 @@
                     </div>
                     <div class="hero__slide swiper-slide hero__slide-img-2">
                         <div class="hero__content container">
-                            <h2 class="hero__title">
+                            <p class="hero__title">
                               Прикоснитесь к прекрасному
-                            </h2>
+                            </p>
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
@@ -254,9 +272,9 @@
                     </div>
                     <div class="hero__slide swiper-slide hero__slide-img-3">
                         <div class="hero__content container">
-                            <h2 class="hero__title">
+                            <p class="hero__title">
                               Прикоснитесь к прекрасному
-                            </h2>
+                            </p>
                             <p class="hero__descr">
                               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                             </p>
@@ -265,7 +283,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="about">
             <div class="about__content container">
@@ -367,14 +385,18 @@
                         </div>
                         <div class="galery__card-active">
                             <div class="galery__card-container">
-                                <img src="./images/galery/card.png" alt="" class="galery__card-img">
-                            <button class="galery__delete"><img src="./images/galery/x.png" alt=""></button>
-                            <div class="galery__card-content">
-                                <h4 class="galery__card-title">Казимир Малевич</h4>
-                                <h5 class="galery__card-subtitle">«Женщина с граблями»</h5>
-                                <p class="galery__card-date">1931–1932</p>
-                                <p class="galery__card-descr">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
-                            </div>
+                                <picture>
+                                    <source media="(max-width: 400px)" srcset="./images/galery/card-media-320.png.png">
+                                    <source media="(max-width: 1024px)" srcset="./images/galery/card-media.png">
+                                    <img class="galery__card-img" src="./images/galery/card.png" alt="">
+                                </picture>
+                                <button class="galery__delete"><img src="./images/galery/x.png" alt=""></button>
+                                <div class="galery__card-content">
+                                    <h4 class="galery__card-title">Казимир Малевич</h4>
+                                    <h5 class="galery__card-subtitle">«Женщина с граблями»</h5>
+                                    <p class="galery__card-date">1931–1932</p>
+                                    <p class="galery__card-descr">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -760,13 +782,13 @@
                 <p class="contacts__descr">Леонтьевский переулок, дом 5/1</p>
               </div>
               <div class="contacts__form-container">
-                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts__form">
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts__form" id="contacts-form">
                   <div class="contacts__label-container">
                     <label class="contacts__label">
-                      <input class="contacts__name" type="text" name="name" placeholder="Имя*">
+                      <input class="contacts__name" type="text" name="name" placeholder="Имя*" data-validate-field="name">
                     </label>
                     <label class="contacts__label">
-                      <input class="contacts__tel" type="tel" name="tel" placeholder="Телефон*">
+                      <input class="contacts__tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel">
                     </label>
                   </div>
                   <input class="contacts__btn" type="submit" name="submit" id="submit" value="Заказать обратный звонок">
@@ -813,7 +835,7 @@
           <div class="footer__container container">
             <picture>
                 <source media="(max-width: 320px)" srcset="./images/header/logo-media.png">
-                <img src="./images/header/logo.svg" alt="" class="header__logo-img">
+                <img src="./images/header/logo.svg" alt="" class="footer__logo-img">
             </picture>
             <ul class="footer__social">
               <li class="footer__social-item">
