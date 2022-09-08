@@ -82,6 +82,16 @@
     opacity: 1;
 }
 
+.projects__image:focus {
+    outline: 2px solid var(--hover);
+}
+
+.projects__image:active {
+    filter: grayscale(0);
+    opacity: 1;
+    outline: 2px solid var(--hover);
+}
+
 .projects__navigation {
     display: flex;
     justify-content: space-between;
@@ -142,9 +152,11 @@
 }
 .projects__swiper-button-prev:focus {
     background-color: var(--blue-light);
+    outline: none;
 }
 .projects__swiper-button-next:focus {
     background-color: var(--blue-light);
+    outline: none;
 }
 .projects__swiper-button-prev:active {
     background-color: var(--blue-light);
@@ -153,6 +165,11 @@
 .projects__swiper-button-next:active {
     background-color: var(--blue-light);
     outline: 1px solid var(--button);
+}
+
+.projects__card {
+    padding: 0;
+    padding-top: 2px;
 }
 
 

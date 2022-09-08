@@ -11,13 +11,13 @@ validation.addField('#name', [
     errorMessage: 'Должно быть минимум 3 символа'
   }
 ]);
-// .addField('#tel', [
-//   {
-//     rule: 'required',
-//     errorMessage: 'Введите номер телефона'
-//   },
-//   {
-//     rule: 'tel',
-//     errorMessage: 'Недопустимый формат'
-//   }
-// ]);
+.addField('#tel', [
+  {
+    rule: 'required',
+    errorMessage: 'Введите номер телефона'
+  },
+  {
+    rule: 'tel',
+    errorMessage: 'Недопустимый формат'
+  }
+]);

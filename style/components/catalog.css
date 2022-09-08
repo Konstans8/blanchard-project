@@ -91,6 +91,7 @@
 .catalog__accordion-title:hover {
     background-color: var(--button);
 }
+
 .catalog__accordion-title:focus {
     color: var(--button);
     background-color: transparent;
@@ -195,5 +196,9 @@
     font-size: 16px;
     line-height: 22px;
     color: #9D5CD0;
+}
+
+.catalog__accordion-button, .ui-accordion-header, .ui-corner-top, .ui-state-default, .ui-accordion-header-active, .ui-state-active, .ui-accordion-icons {
+    outline: none;
 }
 

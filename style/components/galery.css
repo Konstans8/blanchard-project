@@ -119,20 +119,74 @@
 
 .galery__navigation-container {
     display: flex;
-    width: 120px;
+    width: 150px;
     align-items: center;
     margin-bottom: 40px;
 }
 
 .galery__swiper-button-prev {
-    color: white;
-    margin-right: 15px;
+    z-index: 100;
     cursor: pointer;
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+    margin: 2px;
 }
+
 .galery__swiper-button-next {
-    color: white;
-    margin-left: 15px;
+    z-index: 100;
     cursor: pointer;
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+    margin: 2px;
+}
+
+.galery__swiper-button-prev::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: translate(11px, calc(-70% + 11px)) rotate(135deg);
+    color: var(--black-light);
+}
+
+.galery__swiper-button-next::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: translate(9px, calc(-70% + 11px)) rotate(-45deg);
+    color: var(--black-light);
+}
+
+.galery__swiper-button-prev:hover {
+    outline: 1px solid var(--button);
+}
+.galery__swiper-button-next:hover {
+    outline: 1px solid var(--button);
+}
+.galery__swiper-button-prev:focus {
+    background-color: var(--blue-light);
+    outline: none;
+}
+.galery__swiper-button-next:focus {
+    background-color: var(--blue-light);
+    outline: none;
+}
+.galery__swiper-button-prev:active {
+    background-color: var(--blue-light);
+    outline: 1px solid var(--button);
+}
+.galery__swiper-button-next:active {
+    background-color: var(--blue-light);
+    outline: 1px solid var(--button);
 }
 
 .fraction {
@@ -153,6 +207,10 @@
     opacity: 0.5;
 }
 
+.galery__slide {
+    padding: 0;
+}
+
 .galery__slide:hover {
     background-image: url(../../images/galery/hover-galery.png);
     background-repeat: no-repeat;
@@ -161,6 +219,9 @@
     z-index: 10;
 }
 
+.galery__slide:focus {
+    outline: 3px solid var(--hover);
+}
 
 .galery__card-active {
     width: 900px;
