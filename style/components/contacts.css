@@ -68,14 +68,14 @@
     margin-right: 20px;
 }
 
-.contacts__btn:hover {
+.contacts__btn:focus {
     outline: 1px solid #9D5CD0;
     box-shadow: 
         0 0 0 3px #ffffff,
         0 0 0 5px #9D5CD0;
 }
 
-.contacts__btn:focus {
+.contacts__btn:hover {
     background-color: #9D5CD0;
     color: white;
     box-shadow: none;
@@ -104,6 +104,10 @@
 }
 
 .contacts__img:hover .contacts__opacity-svg {
+    opacity: 50%;
+}
+
+.contacts__icon-link:focus .contacts__opacity-svg {
     opacity: 50%;
 }
 

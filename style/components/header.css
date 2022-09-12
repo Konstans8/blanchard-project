@@ -36,22 +36,80 @@
 }
 
 .header__nav-top-link:hover {
+    color: var(--focus);
+    background-color: transparent;  
+}
+
+.header__nav-top-link:focus {
     background-color: var(--hover);
 }
-.header__nav-top-link:focus {
-    color: var(--focus);
-    background-color: transparent;
-}
+
 .header__nav-top-link:active {
+    background-color: transparent;
     color: var(--active);
 }
 
+.header__login {
+    display: flex;
+}
+
 .header__btn-login {
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
     color: var(--white);
+    padding-left: 25px;
+    transition: var(--transition-color-03s);
+    outline: none;
+}
+
+.header__btn-login:focus-visible {
+    background-color: var(--hover);
+    outline: none;
+}
+
+.header__btn-login::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z' fill='%23ffffff'/%3e%3c/svg%3e ");
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: background .3s ease-in-out;
+    z-index: 20;
 }
 
 .header__btn-login:hover {
-    background-color: var(--hover);
+    color: var(--focus);
+    background-color: transparent;
+}
+
+.header__btn-login:active {
+    color: var(--active);
+}
+
+.header__btn-login:hover::before {
+    width: 17px;
+    height: 14px;
+    left: -3px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z' fill='%23C283F3'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-position: right;
+    overflow: visible;
+}
+
+.header__btn-login:active::before {
+    width: 17px;
+    height: 14px;
+    left: -3px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z' fill='%237943A4'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-position: right;
+    overflow: visible;
 }
 
 .header__bottom {
@@ -103,22 +161,29 @@
     margin-left: 10px;
 }
 
-.header__dropdown-btn:hover {
+
+
+.header__dropdown-btn:focus {
+    color: var(--white);
     background-color: var(--hover);
 }
 
-.header__dropdown-btn:focus {
+.header__dropdown-btn:hover {
     background-color: transparent;
     color: var(--focus);
+    
 }
 
-.header__dropdown-btn:hover {
+.header__dropdown-btn:active {
+    background-color: transparent;
     color: var(--active);
 }
 
 .header__dropdown-btn.active::after {
     transform: rotate(225deg);
 }
+
+
 
 .header__dropdown-menu {
     display: none;
@@ -143,6 +208,15 @@
     margin-bottom: 25px;
     display: flex;
     align-items: center;
+    width: 220px;
+}
+
+.header__dropdown-item:hover {
+    outline: 1px solid var(--hover);
+}
+
+.header__dropdown-item:active {
+    filter: grayscale(1);
 }
 
 .header__dropdown-link {

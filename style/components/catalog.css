@@ -88,20 +88,18 @@
     background-color: transparent;
 }
 
-.catalog__accordion-title:hover {
+.ui-state-focus .catalog__accordion-title {
     background-color: var(--button);
+    color: var(--white);
 }
-
-.catalog__accordion-title:focus {
-    color: var(--button);
+.ui-state-hover .catalog__accordion-title {
     background-color: transparent;
+    color: var(--button);
 }
-
-.catalog__accordion-title:active  {
-    color: var(--hover);
-    background-color: transparent; 
+.ui-state-active .catalog__accordion-title {
+    background-color: transparent;
+    color: var(--active);
 }
-
 
 .catalog__icon {
     position: relative;
@@ -157,11 +155,12 @@
 }
 
 .catalog__accordion-item:hover {
-    background-color: var(--button);
-}
-.catalog__accordion-item:focus {
     background-color: transparent;
     text-decoration: underline var(--button);
+    
+}
+.catalog__accordion-item:focus {
+    background-color: var(--button);
 }
 
 .catalog__inside {
